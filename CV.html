@@ -20,11 +20,35 @@
 					<a class="nav-link">CV</a>
 				</div>
 			</div>
-<div style="position: relative; width: 100%; height: 0; padding-top: 129.4118%;
+<div id="canvaEmbedContainer" style="position: relative; width: 100%; height: 0; padding-top: 129.4118%;
  padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
  border-radius: 8px; will-change: transform;">
-  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGJJW_vrr8&#x2F;9ybfZgYREVBsZNc3RqNEbg&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  <iframe id="canvaEmbed" loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://www.canva.com/design/DAGJJW_vrr8/9ybfZgYREVBsZNc3RqNEbg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
   </iframe>
 </div>
-<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGJJW_vrr8&#x2F;9ybfZgYREVBsZNc3RqNEbg&#x2F;view?utm_content=DAGJJW_vrr8&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Joanna Szydelko</a> by Joanna	</body>
+<a href="https://www.canva.com/design/DAGJJW_vrr8/9ybfZgYREVBsZNc3RqNEbg/view?utm_content=DAGJJW_vrr8&utm_campaign=designshare&utm_medium=embeds&utm_source=link" target="_blank" rel="noopener">Joanna Szydelko</a> by Joanna
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var iframe = document.getElementById('canvaEmbed');
+
+    // Function to handle error and retry
+    function handleCanvaEmbedError() {
+        // Check if the iframe srcdoc is empty, indicating PR_END_OF_FILE_ERROR
+        if (iframe.srcdoc === '') {
+            // Attempt to reload the iframe after a delay (e.g., 5 seconds)
+            setTimeout(function() {
+                iframe.src = iframe.src; // This triggers reload
+            }, 5000); // Retry after 5 seconds (adjust as needed)
+        }
+    }
+
+    // Add event listener for error on the iframe
+    iframe.addEventListener('error', handleCanvaEmbedError);
+});
+</script>
+
+</body>
+</html>
