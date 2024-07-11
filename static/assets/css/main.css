@@ -2575,9 +2575,20 @@ input, select, textarea {
 			margin: 0;
 		}
 
+    iframe
+    {
+        width:100vw;
+        height:95vh;
+    }
+
+    .spacer
+    {
+        height:30px;
+    }
+
 /* Nav-Bar */
 
-    .nav-bar {
+    #nav-bar {
         display: flex;                /* Use flexbox for layout */
         padding: 10px 0;              /* Padding for top and bottom */
         position: fixed;              /* Fix the nav bar to the top */
